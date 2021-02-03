@@ -1,7 +1,16 @@
 #include <stdio.h>
+/**
+ *size off cheacker
+ *
+ * Main entery point 
+ * 
+ *Return always 0 (success)
+ */
 
 main()
+
 {
+
   char           ch = ' ';
   int            int_num = 0;
   float          flt_num = 0.0f;
