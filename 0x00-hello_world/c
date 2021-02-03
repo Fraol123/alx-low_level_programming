@@ -1,1 +1,1 @@
-gcc -E
+gcc -s main.c
