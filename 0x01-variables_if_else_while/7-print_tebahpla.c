@@ -11,6 +11,7 @@ for (x = 'Z'; x >= 'A'; x--)
 {
 char lower_x = tolower(x);
 putchar(lower_x);
+putchar('\n');
 }
 return (0);
 }
