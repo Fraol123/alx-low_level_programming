@@ -1,13 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 /*Function to print the alphabet*/
-/*in lower case*/
-
+/*retrn always zero*/
+ 
 int main(void)
 {
-for (int x = 'A'; x <= 'Z'; x++)
+char x; 
+for ( x = 'A'; x <= 'Z'; x++)
 {
-int lower_x = tolower(x);
-putchar(lower_x);
+char lower_x = tolower(x);
+putchar(lower_x );
+ putchar('\n');
 }
 return (0);
 }
