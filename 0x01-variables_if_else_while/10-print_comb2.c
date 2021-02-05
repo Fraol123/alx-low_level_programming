@@ -1,22 +1,25 @@
-#include <stdlib.h>
-#include <time.h>
-/*more headers goes there*/
+#include <stdio.h>
 
-/*betty style doc for function main goes there*/
+/**
+ * main - entry point
+ * Return: always 0 (success)
+ */
+
 int main(void)
-
 {
+	int num;
 
-int i;
-
-srand(time(0));
-i = rand() - RAND_MAX  /  2;
-for (int i = 0; i < 100 ; i++)
-{
-
-putchar((i / 10) + '0');
-putchar((i % 10) + '0');
-putchar("%d", i);
+	for (num = 0; num < 100; num++)
+	{
+		putchar((num / 10) + '0');
+		putchar((num % 10) + '0');
+		if (num < 99)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
-return (0);
-}
+

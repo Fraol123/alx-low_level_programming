@@ -1,17 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
+#include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - entry point
+ * Return: always 0 (success)
+ */
+
 int main(void)
 {
-int n;
+	int num;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-
-long n;
-int base = 10
-findNumOfDigits(n, base);
-return (0);
+	for (num = 0; num < 10; num++)
+	{
+		printf("%d", num);
+	}
+	printf("\n");
+	return (0);
 }
