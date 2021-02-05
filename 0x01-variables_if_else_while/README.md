@@ -1,1 +1,2 @@
-# working with if ,else, while
+learning about 
+if else, while, for loops

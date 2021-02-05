@@ -1,16 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-/*alphabets in lower case*/
-/*excluding q and e*/
+
+/**
+ * main - entry point
+ * Return: always 0 (success)
+ */
 
 int main(void)
 {
-  char x;
-  for (x = 'A'; x <= 'Z'; x++)
-{
-  char lower_x = tolower(x);
-  putchar(lower_x);
-}
-  return (0);
+	char x;
+
+	for (x = 'a'; x <= 'z'; x++)
+	{
+		if (x == 'q' || x  == 'e')
+		{
+			x++;
+		}
+		putchar(x);
+	}
+	putchar('\n');
+	return (0);
 }

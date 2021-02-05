@@ -1,17 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-/*Function to print the alphabet*/
-/*retrn always zero*/
- 
+
+/**
+ * main - entry point
+ * Return: always 0 (success)
+ */
+
 int main(void)
 {
-char x; 
-for ( x = 'A'; x <= 'Z'; x++)
-{
-char lower_x = tolower(x);
-putchar(lower_x );
- putchar('\n');
-}
-return (0);
+	char x;
+
+	for (x = 'a'; x <= 'z'; x++)
+	{
+		putchar(x);
+	}
+	putchar('\n');
+	return (0);
 }
