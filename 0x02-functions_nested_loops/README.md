@@ -1,4 +1,4 @@
-working with 
+working with
 functioon prototype
-creating header file 
-declaring functions 
+creating header file
+declaring functions
