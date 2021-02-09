@@ -3,16 +3,17 @@
 /**
  * print_alphabet - order from a to z
  *
- *Return: lower
+ *Return: x
  */
 
 void print_alphabet(void)
 {
-	char lower;
+	char x;
 
-	for (lower = 'a'; lower <= 'z'; lower++)
+	for (x = 'a'; x <= 'z'; x++)
 	{
-		_putchar(lower);
+		_putchar(x);
 	}
 	_putchar('\n');
+       
 }
