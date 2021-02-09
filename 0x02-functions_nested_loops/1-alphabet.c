@@ -3,7 +3,7 @@
 /**
  * print_alphabet - order from a to z
  *
- *Retuen: lower
+ *Return: lower
  */
 
 void print_alphabet(void)
