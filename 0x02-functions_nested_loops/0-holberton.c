@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *Entery point
+ * main- a program that prints Holberton and returns 0
  *
- *Return: always 0 (sucess)
+ *Return: always 0
  */
 
 int main(void)
