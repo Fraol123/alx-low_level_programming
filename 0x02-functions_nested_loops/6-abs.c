@@ -3,20 +3,20 @@
 /**
  * _abs - return absolute value
  *
- * @z: int checked
+ * @y: int checked
  *
  *Return: absolute Value
  *
  */
 
-int _abs(int)
+int _abs(int y)
 {
-	if (z < 0)
+	if (y < 0)
 	{
-		return (0 - z);
+		return (0 - y);
 	}
 	else
 	{
-		return (z);
+		return (y);
 	}
 }
