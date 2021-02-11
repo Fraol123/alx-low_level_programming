@@ -10,23 +10,28 @@ void more_numbers(void);
 void more_numbers(void)
 {
 
-	int num, repeat;
+	char i, j, k;
 
-	for (repeat = 0; repeat <= 10; repeat++)
+	int l;
+
+	for (l = 0; l <= 9; l++)
 	{
-		for (num = 0; num <= 14; num++)
+		k = '9';
+		for (i = '0'; i <= '1'; i++)
 		{
-			if (num < 10)
+
+			for (j = '0'; j <= k; j++)
 			{
-				_putchar((num % 10) + '0');
+				if (i > '0')
+
+					_putchar(i);
+				_putchar(j);
 			}
-			if (num >= 10)
-			{
-				_putchar((num / 10) + '0');
-				_putchar((num %  10) + '0');
-			}
+			k = '4';
 		}
 		_putchar('\n');
 	}
 }
+
+
 
