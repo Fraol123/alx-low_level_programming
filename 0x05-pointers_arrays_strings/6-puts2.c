@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *puts2- print even number
+ *puts2- print skip one number
  *@str:checked
  *Return:nothing
  */
