@@ -11,7 +11,7 @@ void rev_string(char *s)
 
 	if (s)
 	{
-		int length = 11;
+		int length = 10;
 
 		int i = 0;
 
@@ -22,10 +22,10 @@ void rev_string(char *s)
 			length++;
 		}
 
-		while (i < 11)
+		while (i < 10)
 		{
 
-			_putchar(s[11 - i - 1]);
+			_putchar(s[10 - i - 1]);
 			i++;
 		}
 	}
