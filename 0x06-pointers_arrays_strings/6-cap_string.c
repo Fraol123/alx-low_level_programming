@@ -11,22 +11,13 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i]; ++i)
 	{
-		if (i == 0)
+
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			if (s[i] >= 'A' && s[i] <= 'Z')
-			{
-				s[i] = s[i] + 32;
-			}
+			s[i] = s[i] -  32;
 		}
-		else if (s[i] >= 'a' && s[i] <= 'z') 
-		{
-			s[i] = s[i] - 32;
-		}
-			
-			
-			  
-			
-		
+
+
 	}
 	return (s);
 }
