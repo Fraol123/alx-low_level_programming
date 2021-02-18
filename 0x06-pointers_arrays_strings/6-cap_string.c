@@ -13,18 +13,20 @@ char *cap_string(char *s)
 	{
 		if (i == 0)
 		{
-			if (s[i] >= 97 && s[i] <= 122)
+			if (s[i] >= 'A' && s[i] <= 'Z')
 			{
-				s[i] = s[i] - 32;
+				s[i] = s[i] + 32;
 			}
 		}
-		else if (s[i - 1] == ' ')
+		else if (s[i] >= 'a' && s[i] <= 'z') 
 		{
-			if (s[i] >= 97 && s[i] <= 122)
-			{
-				s[i] = s[i];
-			}
+			s[i] = s[i] - 32;
 		}
+			
+			
+			  
+			
+		
 	}
 	return (s);
 }
