@@ -1,3 +1,4 @@
+
 #include "holberton.h"
 /**
  *_strncpy- copies the string pointed to by src,
@@ -14,16 +15,20 @@ char *_strncpy(char *dest, char *src, int n)
 
 	i = 0;
 
-	while (src[i])
+	while (i < n &&  src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	for (; i < n; i++)
+	while (i < n)
 	{
 		dest[i] = '\0';
+		i++;
 	}
 
 	return (dest);
 }
+
+
+
 
