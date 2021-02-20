@@ -1,34 +1,39 @@
 #include "holberton.h"
 
 /**
- *rev_string- prints in reverse
+  *rev_string- prints in reverse
+  *_strlen- count
  *@s: checked
- *
  *Return: nothing
  */
-void rev_string(char *s)
+int _strlen(char *s)
 {
 
-	if (s)
+	int i, len;
+
+	len = 0;
+
+	for (i = 0; s[i] != '\0'; ++i)
 	{
-		int length = 10;
-
-		int i = 0;
-
-		int j;
-
-		for (j = 0; s[j] != '\0'; j++)
-		{
-			length++;
-		}
-
-		while (i < 10)
-		{
-
-			_putchar(s[10 - i - 1]);
-			i++;
-		}
+		len++;
 	}
+	return (len);
+}
 
-		_putchar('\n');
+void rev_string(char *s)
+{
+	int strsize = _strlen(s);
+	int i;
+
+	char c;
+
+	i = 0;
+
+	while (i < (strsize / 2))
+	{
+		c = *(s + i);
+		*(s + i) = *(s + strsize - 1 - i);
+		*(s + strsize - 1 - i) = c;
+		i++;
+	}
 }
