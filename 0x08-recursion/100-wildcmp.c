@@ -2,7 +2,7 @@
 
 int strlen_no_wilds(char *str);
 void iterate_wild(char **wildstr);
-char *fix_match(char *str, char *pfix);
+char *postfix_match(char *str, char *postfix);
 int wildcmp(char *s1, char *s2);
 
 /**
@@ -43,30 +43,30 @@ void iterate_wild(char **wildstr)
 }
 
 /**
- *fix_match - Checks if a string str matches the postfix of
+ *postfix_match - Checks if a string str matches the postfix of
  *                 another string potentially containing wildcards.
  *@str: The string to be matched.
- *@fix: The postfix.
+ *@postfix: The postfix.
  *
  *Return: If str and postfix are identical - a pointer to the null byte
  *                                            located at the end of postfix.
  *         if not - a pointer to the first unmatched character in postfix.
  */
-char *fix_match(char *str, char *pfix)
+char *postfix_match(char *str, char *postfix)
 {
 	int str_len = strlen_no_wilds(str) - 1;
-	int pfix_len = strlen_no_wilds(pfix) - 1;
+	int postfix_len = strlen_no_wilds(postfix) - 1;
 
-	if (*pfix == '*')
-		iterate_wild(&pfix);
+	if (*postfix == '*')
+		iterate_wild(&postfix);
 
-	if (*(str + str_len - pfix_len) == *pfix && *pfix != '\0')
+	if (*(str + str_len - postfix_len) == *postfix && *postfix != '\0')
 	{
-		pfix++;
-		return (fix_match(str, pfix));
+		postfix++;
+		return (postfix_match(str, postfix));
 	}
 
-	return (pfix);
+	return (postfix);
 }
 
 /**
@@ -82,7 +82,7 @@ int wildcmp(char *s1, char *s2)
 	if (*s2 == '*')
 	{
 		iterate_wild(&s2);
-		s2 = fix_match(s1, s2);
+		s2 = postfix_match(s1, s2);
 	}
 
 	if (*s2 == '\0')
