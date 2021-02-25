@@ -1,3 +1,3 @@
-**Debuginig**
+**Debugging**
 =================
 >one less error 
