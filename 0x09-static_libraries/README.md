@@ -24,3 +24,7 @@
 - unsigned int _strspn(char *s, char *accept);
 - char *_strpbrk(char *s, char *accept);
 - char *_strstr(char *haystack, char *needle);
+1. Without libraries what have we? We have no past and no future
+
+
+- creat_static_lib.sh:Bash that creates a static library called liball.a from all the .c files from current directory.
