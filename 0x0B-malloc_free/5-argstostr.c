@@ -14,14 +14,14 @@ char *argstostr(int ac, char **av)
 {
 	char *str;
 
-	int arg, byte, index, size = ac;
+	int arg, n, i, size = ac;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
+		for (n = 0; av[arg][n]; n++)
 			size++;
 	}
 
@@ -30,14 +30,14 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	index = 0;
+	i = 0;
 
 	for (arg = 0; arg < ac; arg++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[index++] = av[arg][byte];
+		for (n = 0; av[arg][n]; n++)
+			str[i++] = av[arg][n];
 
-		str[index++] = '\n';
+		str[i++] = '\n';
 	}
 
 	str[size] = '\0';
