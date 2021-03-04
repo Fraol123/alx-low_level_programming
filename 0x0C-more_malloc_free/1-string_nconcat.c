@@ -12,29 +12,36 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *varcon;
 
-	int i,  conc_i = 0, len = n;
+	unsigned int i, j, len = n;
 
 	if (s1 == NULL)
 		s1 = "";
 
-	if (s2 == NULL)
-		s2 = "";
+	for (i = 0; s1[i]; i++)
+		;
 
-	for (i = 0; s1[i] || s2[i]; i++)
+	for (j = 0; s2[j]; j++)
+		;
 
-		len++;
+	if (j > n)
+		j = n;
 
-	varcon  = malloc(sizeof(char) * (len + 1));
+	varcon = malloc(sizeof(char) * (i + j + 1));
 
-	if (varcon  == NULL)
+	if (varcon == NULL)
 		return (NULL);
 
-	for (i = 0; s1[i]; i++)
-		varcon[conc_i++] = s1[i];
-	for (i = 0; s2[i]; i++)
-		varcon[conc_i++] = s2[i];
+	for (len = 0; len < i; len++)
+	{
+		varcon[len] = s1[len];
+	}
 
-	varcon[len] = '\0';
+	for (len = 0; len < j; len++)
+	{
+		varcon[len + i] = s2[len];
+	}
+
+	varcon[i + j] = '\0';
 
 	return (varcon);
 }
