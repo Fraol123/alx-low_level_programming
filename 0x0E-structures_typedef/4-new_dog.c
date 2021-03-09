@@ -42,14 +42,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 		return (NULL);
 
-		shappered->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	nameLength = _strlen(name) + 1;
+	shappered->name = malloc(sizeof(char) * nameLength);
 	if (shappered->name == NULL)
 	{
 		free(shappered->name);
 		free(shappered);
 		return (NULL);
-	}   
-	shappered->owner =  malloc(sizeof(char) * (_strlen(owner) + 1));
+	}
+
+	for (i = 0; i < nameLength; i++)
+	{
+		shappered->name[i] = name[i];
+	}
+
+	shappered->age = age;
+
+
+	ownerLength = _strlen(owner) + 1;
+	shappered->owner =  malloc(sizeof(char) * ownerLength);
 	if (shappered->owner == NULL)
 	{
 		free(shappered->name);
@@ -57,16 +68,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(shappered);
 		return (NULL);
 	}
-	for (i = 0; i < (nameLength + 1); i++)
-	{
-		shappered->name[i] = name[i];
-	}
-	for (i = 0; i <= (ownerLength + 1); i++)
+
+	for (i = 0; i < ownerLength; i++)
 	{
 		shappered->owner[i] = owner[i];
 	}
-	shappered->age = age;
-
 
 	return (shappered);
 }
