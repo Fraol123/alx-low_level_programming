@@ -14,7 +14,7 @@ int _strlen(char *str)
 {
 	int len = 0;
 
-	while (*str++)
+	while (str[len] != '\0')
 		len++;
 	return (len);
 }
@@ -39,26 +39,29 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	shappered = malloc(sizeof(dog_t));
 	if (shappered == NULL)
+
 		return (NULL);
 
-	shappered->name = malloc(sizeof(char) * (_strlen(name) + 1));
+		shappered->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (shappered->name == NULL)
-	{
-		free(shappered);
-		return (NULL);
-	}
-	shappered->owner =  malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (shappered->owner == NULL)
 	{
 		free(shappered->name);
 		free(shappered);
 		return (NULL);
+	}   
+	shappered->owner =  malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (shappered->owner == NULL)
+	{
+		free(shappered->name);
+		free(shappered->owner);
+		free(shappered);
+		return (NULL);
 	}
-	for (i = 0; i < nameLength; i++)
+	for (i = 0; i < (nameLength + 1); i++)
 	{
 		shappered->name[i] = name[i];
 	}
-	for (i = 0; i < ownerLength; i++)
+	for (i = 0; i <= (ownerLength + 1); i++)
 	{
 		shappered->owner[i] = owner[i];
 	}
