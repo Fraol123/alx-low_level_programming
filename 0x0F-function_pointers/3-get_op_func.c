@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *get_op_fun- choses the right operation
+ *get_op_func- choses the right operation
  *@s:the operator passed as argument to the program
- *
  *Return: int
  */
 int (*get_op_func(char *s))(int, int)
