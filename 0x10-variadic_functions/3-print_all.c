@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-
 /**
  *print_char- prints char
  *@ap:argument to the function
@@ -76,8 +75,7 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 
-		if (!format[i])
-
+		if (format[i] == '\0')
 			continue;
 
 		while (func[j].symbol != NULL)
@@ -97,3 +95,4 @@ void print_all(const char * const format, ...)
 	va_end(aps);
 	printf("\n");
 }
+
