@@ -2,10 +2,10 @@
 #include <stdlib.h>
 /**
  *read_textfile- Reads a text file and prints it to POSIX stdout.
- *@filename: A ptr to the name of the file 
+ *@filename: A ptr to the name of the file
  *@letters: The number of letters the function should read and print
  *Return: if filename is NULL return 0
- *           if write fails or does not write 
+ *           if write fails or does not write
  *          the expected amount of bytes, return 0
  */
 
