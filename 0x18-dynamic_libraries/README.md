@@ -7,4 +7,6 @@
 # how to compile
 ```
 gcc *.c -c -fPIC
+gcc -shared -o libholberton.so *.o
 ```
+[further read](https://medium.com/@mohamethseck/dynamic-libraries-shared-library-2b14c5121904)
