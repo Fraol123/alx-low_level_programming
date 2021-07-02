@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module for perimeter of island 
+module for perimeter of island
 """
 
 
