@@ -1,5 +1,6 @@
 #Makefiles
-===========
-
--target: dependencies
--<tab> action
+==============
+```
+target: dependencies
+<tab> action
+```
